@@ -1,5 +1,10 @@
 import ProfileCard from "../../Components/ProfileCard";
 import { useState } from "react";
+import Register from "../../Components/Register/Register";
+import { useContext } from "react";
+
+import { Context } from "../../Context/AuthContext";
+
 import {
   ButtonBlack,
   ButtonBlue,
@@ -7,13 +12,6 @@ import {
   HeaderContainer,
   MainContainer,
 } from "./styles";
-
-import Register from "../../Components/Register/Register";
-
-import { useContext } from "react";
-
-import { Context } from "../../Context/AuthContext";
-import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
   const { handleLogout } = useContext(Context);

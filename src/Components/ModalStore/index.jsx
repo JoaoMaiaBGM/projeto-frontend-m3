@@ -52,7 +52,8 @@ const StoreModal = ({
             <a
               href={`https://wa.me/55${storeData.contact}`}
               className='contactInfo'
-              target='_blank'>
+              target='_blank'
+              rel='noreferrer'>
               {storeData.contact}
             </a>
           </div>

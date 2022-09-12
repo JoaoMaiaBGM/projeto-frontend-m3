@@ -20,18 +20,17 @@ function Cards() {
         onClick={() => {
           setIsOpenModalStore(true);
           handleOnClickCard(empresa);
-        }}
-      >
-        <div className="cardImg">
-          <img src={empresa.urllogo} alt="logo da empresa" />
+        }}>
+        <div className='cardImg'>
+          <img src={empresa.urllogo} alt='logo da empresa' />
         </div>
-        <div className="cardInfo">
+        <div className='cardInfo'>
           <h2>{empresa.name}</h2>
-          <p className="cardCategory">{empresa.category}</p>
-          <p className="cardCity">
+          <p className='cardCategory'>{empresa.category}</p>
+          <p className='cardCity'>
             <strong>Cidade:</strong> {empresa.city}
           </p>
-          <p className="cardDistrict">
+          <p className='cardDistrict'>
             <strong>Bairro:</strong> {empresa.district}
           </p>
           <span>

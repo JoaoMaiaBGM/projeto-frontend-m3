@@ -7,9 +7,8 @@ import { useContext } from "react";
 import { Context } from "../../Context/AuthContext";
 
 function LoginModal({ id = "modal" }) {
-  const { authenticated, handleLogin, setIsOpenModalLogin, isOpenModalLogin } =
+  const { handleLogin, setIsOpenModalLogin, isOpenModalLogin } =
     useContext(Context);
-  // console.debug("Login", authenticated);
 
   const {
     register,
@@ -27,33 +26,32 @@ function LoginModal({ id = "modal" }) {
     <Container
       id={id}
       isOpenModalLogin={isOpenModalLogin}
-      onClick={handleOutsideClick}
-    >
+      onClick={handleOutsideClick}>
       <DivModal>
         <h2>Login</h2>
         <DivForm>
           <form onSubmit={handleSubmit(handleLogin)}>
-            <label htmlFor="email"></label>
+            <label htmlFor='email'></label>
             <DivInput>
               <input
-                type="text"
-                id="email"
-                placeholder="Email"
+                type='text'
+                id='email'
+                placeholder='Email'
                 {...register("email")}
               />
               <Error>{errors.email?.message}</Error>
             </DivInput>
-            <label htmlFor="password"></label>
+            <label htmlFor='password'></label>
             <DivInput>
               <input
-                type="password"
-                placeholder="Senha"
-                id="password"
+                type='password'
+                placeholder='Senha'
+                id='password'
                 {...register("password")}
               />
               <Error>{errors.password?.message}</Error>
             </DivInput>
-            <button type="submit">Entrar</button>
+            <button type='submit'>Entrar</button>
           </form>
         </DivForm>
       </DivModal>

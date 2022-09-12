@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { BoxImg, BoxUser, MainContainerBox } from "./styled";
-import { BsWhatsapp } from "react-icons/bs";
 import { useEffect } from "react";
 
 const ProfileCard = () => {
@@ -9,7 +8,7 @@ const ProfileCard = () => {
 
   useEffect(() => {
     setStorageUser(JSON.parse(userData));
-  }, []); 
+  }, [userData]);
 
   const { urllogo, name, category, city, contact, district } = storageUser;
 
@@ -27,8 +26,10 @@ const ProfileCard = () => {
         <span>{district}</span>
         <label>Contato</label>
         <span>
-          {/* <BsWhatsapp /> */}
-          <a href={`https://wa.me/55${contact}`} target="_blank">
+          <a
+            href={`https://wa.me/55${contact}`}
+            target='_blank'
+            rel='noreferrer'>
             {contact}
           </a>
         </span>

@@ -14,7 +14,7 @@ function AuthProvider({ children }) {
 
   useEffect(() => {
     const Token = localStorage.getItem("@User:Token");
-    
+
     if (Token) {
       Api.defaults.headers.common["Authorization"] = `Bearer ${JSON.parse(
         Token
@@ -91,6 +91,7 @@ function AuthProvider({ children }) {
         lojas,
         setIsOpenModalLogin,
         isOpenModalLogin,
+        loading,
       }}>
       {children}
     </Context.Provider>
